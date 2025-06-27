@@ -9,13 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Pastikan path ke script dan css sudah benar -->
     <link rel="stylesheet" href="css/main-style.css">
 </head>
 <body class="bg-slate-50 text-slate-800">
 
     <div class="flex min-h-screen">
-        <!-- Sidebar untuk Desktop (Tidak diubah, sudah benar) -->
+        <!-- Sidebar untuk Desktop -->
         <aside class="w-72 bg-white border-r border-slate-200 p-6 fixed h-full overflow-y-auto hidden lg:block">
             <div class="flex items-center gap-3 mb-8">
                 <div class="bg-sky-500 p-2 rounded-lg">
@@ -49,7 +48,7 @@
         <!-- Konten Utama -->
         <main class="lg:ml-72 p-6 md:p-10 w-full">
             
-            <!-- MODIFIKASI 1: Header untuk Mobile -->
+            <!-- MODIFIKASI: Header untuk Mobile -->
             <header class="lg:hidden flex justify-between items-center mb-6">
                 <div class="flex items-center gap-3">
                     <div class="bg-sky-500 p-2 rounded-lg">
@@ -62,7 +61,7 @@
                 </button>
             </header>
             
-            <!-- MODIFIKASI 1: Konten untuk Menu Mobile -->
+            <!-- MODIFIKASI: Konten untuk Menu Mobile -->
              <div id="mobile-menu" class="hidden lg:hidden mb-6 bg-white p-4 rounded-lg shadow-md">
                 <nav id="mobile-nav">
                     <ul class="space-y-2">
@@ -87,43 +86,143 @@
                 </nav>
              </div>
 
-             <!-- MODIFIKASI 2: Mengisi Konten Section yang Kosong -->
+             <!-- Wrapper untuk semua konten utama -->
              <div class="max-w-4xl mx-auto">
+                
+                <!-- Section Pengantar -->
                 <section id="pengantar" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">Pengantar</h2>
                     <p class="text-slate-600 leading-relaxed">Selamat datang di modul Pembelajaran Mendalam. Modul ini dirancang untuk memberikan pemahaman komprehensif tentang kerangka kerja dan prinsip-prinsip yang mendasari pembelajaran yang efektif dan bermakna.</p>
                     <p class="text-slate-600 leading-relaxed">Kita akan menjelajahi berbagai aspek, mulai dari dimensi profil lulusan hingga strategi implementasi praktis di lapangan.</p>
                 </section>
 
+                <!-- Section Dimensi Profil Lulusan (Konten dari Presentasi) -->
                 <section id="dimensi" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">A. Dimensi Profil Lulusan</h2>
-                    <p class="text-slate-600 leading-relaxed">Profil lulusan yang ideal mencakup beberapa dimensi kunci, termasuk kompetensi akademik, keterampilan non-teknis (soft skills), karakter, dan kemampuan beradaptasi di era digital.</p>
+                    <p class="text-lg text-slate-500 italic">Sebuah Kerangka untuk Mencetak Generasi Unggul Indonesia.</p>
+
+                    <div class="mt-8 p-6 bg-sky-50 rounded-lg border border-sky-200">
+                        <h3 class="text-2xl font-semibold text-sky-800 mb-3">Apa itu Pembelajaran Mendalam (PM)?</h3>
+                        <p class="text-slate-700 leading-relaxed">Pembelajaran Mendalam (PM) adalah sebuah pendekatan yang bertujuan menciptakan suasana dan proses belajar yang berkesadaran, bermakna, dan menggembirakan. Proses ini dilakukan secara holistik dan terpadu melalui olah pikir, olah hati, olah rasa, dan olah raga.</p>
+                        <p class="mt-4 font-semibold text-slate-800">Fokus Utama: Pencapaian delapan dimensi Profil Lulusan.</p>
+                    </div>
+
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Delapan Dimensi Kompetensi Utuh</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6">Dimensi profil lulusan adalah kompetensi utuh yang harus dimiliki setiap peserta didik setelah menyelesaikan pendidikannya. Kedelapan dimensi ini tidak hanya menekankan aspek kognitif, tetapi juga pengembangan karakter dan keterampilan untuk kehidupan sehari-hari.</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Keimanan & Ketakwaan</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Kewargaan</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Penalaran Kritis</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Kreativitas</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Kolaborasi</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Kemandirian</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Kesehatan</div>
+                            <div class="bg-slate-100 p-4 rounded-lg font-medium text-slate-700">Komunikasi</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">1. Keimanan dan Ketakwaan</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang memiliki keyakinan teguh kepada Tuhan dan menghayati nilai-nilai spiritual.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Perilaku:</span> Berakhlak mulia, penuh kasih, dan bertanggung jawab.</li>
+                                <li><span class="font-semibold">Tujuan:</span> Keseimbangan pengetahuan, moralitas, dan hubungan harmonis.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">2. Kewargaan</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang cinta tanah air, menaati aturan, serta memiliki kepedulian sosial.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Fokus:</span> Berkontribusi untuk kebaikan bersama.</li>
+                                <li><span class="font-semibold">Landasan:</span> Nilai-nilai Pancasila, moral, dan keadilan.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">3. Penalaran Kritis</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang mampu berpikir logis, analitis, dan reflektif dalam memproses informasi.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Keterampilan:</span> Menganalisis masalah dan mengevaluasi argumen.</li>
+                                <li><span class="font-semibold">Hasil:</span> Memecahkan masalah secara sistematis berbasis bukti.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">4. Kreativitas</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang mampu berpikir inovatif dan orisinal untuk menciptakan solusi unik.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Karakteristik:</span> Berpikir *out-of-the-box* dan melihat dari berbagai sudut pandang.</li>
+                                <li><span class="font-semibold">Tujuan:</span> Menciptakan sesuatu yang orisinal dan berdampak positif.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">5. Kolaborasi</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang mampu bekerja sama secara efektif dalam semangat gotong royong.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Perilaku:</span> Membagi peran dan menghargai kontribusi.</li>
+                                <li><span class="font-semibold">Tujuan:</span> Mencapai tujuan bersama dalam suasana harmonis.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">6. Kemandirian</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Peserta didik yang bertanggung jawab atas proses dan hasil belajarnya sendiri.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Ciri-ciri:</span> Mengambil inisiatif, gigih, dan mengelola waktu.</li>
+                                <li><span class="font-semibold">Esensi:</span> Menjadi pembelajar sepanjang hayat.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">7. Kesehatan</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Individu yang sehat jasmani dan rohani untuk mencapai kesejahteraan (well-being).</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Tujuan:</span> Memiliki fisik bugar dan mental sehat.</li>
+                                <li><span class="font-semibold">Dampak:</span> Menjalani kehidupan produktif dan berkontribusi positif.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3 p-6 bg-slate-50 rounded-lg border-l-4 border-sky-500">
+                            <h4 class="text-xl font-bold text-slate-800">8. Komunikasi</h4>
+                            <blockquote class="border-l-4 border-slate-300 pl-4 text-slate-600 italic">Peserta didik yang mampu menyampaikan ide dan berinteraksi secara efektif.</blockquote>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><span class="font-semibold">Kemampuan:</span> Berbagi pendapat dan menyampaikan sudut pandang.</li>
+                                <li><span class="font-semibold">Dampak:</span> Membangun hubungan positif dan menjembatani perbedaan.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 bg-gray-800 text-white rounded-lg">
+                        <h3 class="text-2xl font-semibold text-sky-400 mb-3">Kesimpulan: Profil Lulusan yang Holistik</h3>
+                        <p class="leading-relaxed">Delapan dimensi profil lulusan ini merupakan kerangka kerja utuh untuk membentuk peserta didik yang tidak hanya cerdas, tetapi juga berkarakter, terampil, dan siap menghadapi tantangan kehidupan dengan seimbang.</p>
+                    </div>
                 </section>
 
+                <!-- Section Prinsip Pembelajaran -->
                 <section id="prinsip" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">B. Prinsip Pembelajaran</h2>
-                    <p class="text-slate-600 leading-relaxed">Pembelajaran yang efektif didasarkan pada prinsip-prinsip seperti relevansi konteks, pembelajaran aktif, umpan balik yang konstruktif, dan kolaborasi antar siswa.</p>
+                    <p class="text-slate-600 leading-relaxed">Pembelajaran yang efektif didasarkan pada prinsip-prinsip seperti relevansi konteks, pembelajaran aktif, umpan balik yang konstruktif, dan kolaborasi antar siswa. Setiap kegiatan dirancang untuk mendorong rasa ingin tahu dan pemahaman yang mendalam.</p>
                 </section>
 
+                <!-- Section Pengalaman Belajar -->
                 <section id="pengalaman" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">C. Pengalaman Belajar</h2>
-                    <p class="text-slate-600 leading-relaxed">Merancang pengalaman belajar yang menarik adalah kunci. Ini dapat dicapai melalui metode berbasis proyek, studi kasus, gamifikasi, dan pembelajaran berbasis masalah.</p>
+                    <p class="text-slate-600 leading-relaxed">Merancang pengalaman belajar yang menarik adalah kunci. Ini dapat dicapai melalui metode berbasis proyek, studi kasus, gamifikasi, dan pembelajaran berbasis masalah yang memungkinkan siswa menerapkan pengetahuan mereka dalam situasi dunia nyata.</p>
                 </section>
 
+                <!-- Section Kerangka Pembelajaran -->
                 <section id="kerangka" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">D. Kerangka Pembelajaran</h2>
-                    <p class="text-slate-600 leading-relaxed">Kerangka pembelajaran menyediakan struktur yang jelas, mencakup tujuan pembelajaran, aktivitas, sumber daya, dan metode penilaian yang selaras untuk mencapai hasil yang diinginkan.</p>
+                    <p class="text-slate-600 leading-relaxed">Kerangka pembelajaran menyediakan struktur yang jelas, mencakup tujuan pembelajaran, aktivitas, sumber daya, dan metode penilaian yang selaras untuk mencapai hasil yang diinginkan. Ini memastikan bahwa semua komponen pendidikan saling mendukung.</p>
                 </section>
                 
-                 <section id="strategi" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm">
+                <!-- Section Strategi Implementasi -->
+                <section id="strategi" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm">
                     <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">Strategi Implementasi</h2>
-                    <p class="text-slate-600 leading-relaxed">Implementasi yang berhasil memerlukan pendekatan bertahap, pelatihan bagi para pendidik, dukungan berkelanjutan, dan siklus evaluasi untuk perbaikan terus-menerus.</p>
+                    <p class="text-slate-600 leading-relaxed">Implementasi yang berhasil memerlukan pendekatan bertahap, pelatihan bagi para pendidik, dukungan berkelanjutan dari semua pemangku kepentingan, dan siklus evaluasi untuk perbaikan terus-menerus.</p>
                 </section>
              </div>
         </main>
     </div>
 
-    <!-- Script harus dimuat di akhir body untuk performa yang lebih baik -->
+    <!-- MODIFIKASI: Script dimuat di akhir body untuk performa lebih baik -->
     <script src="js/main-script.js"></script>
 </body>
 </html>
