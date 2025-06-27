@@ -1,0 +1,26 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+.content-section {
+    scroll-margin-top: 2rem;
+}
+/* Active link styling */
+.nav-link.active {
+    color: #0284c7; /* text-sky-600 */
+    font-weight: 600; /* font-semibold */
+    border-left-color: #0ea5e9; /* border-sky-500 */
+}
