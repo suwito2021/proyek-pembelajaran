@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Login dan Kuis</title>
+    <link rel="stylesheet" href="css/quiz-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h2 id="initialWelcome">Selamat Datang!</h2>
+    <div id="initialButtons">
+        <button onclick="openModal('loginModal')" style="width:auto; margin-right: 10px;">Login</button>
+        <button onclick="openModal('registerModal')" style="width:auto;">Register</button>
+    </div>
+    <div id="statusMessage"></div>
+
+    <div id="loginModal" class="modal"> 
+        <form class="modal-content animate" id="loginForm"> 
+            <div class="imgcontainer"> <span onclick="closeModal('loginModal')" class="close" title="Tutup Modal">×</span> <img src="https://placehold.co/150x150/e0e0e0/000000?text=Avatar" alt="Avatar" class="avatar"> </div> 
+            <div class="container"> <label for="login_uname"><b>Username</b></label> <input type="text" placeholder="Masukkan Username" name="uname" id="login_uname" required> <label for="login_psw"><b>Password</b></label> <input type="password" placeholder="Masukkan Password" name="psw" id="login_psw" required> <button type="submit">Login</button> </div> 
+            <div class="container-footer"> <button type="button" onclick="closeModal('loginModal')" class="cancelbtn">Batal</button> <span class="psw">Lupa <a href="#">password?</a></span> </div> 
+        </form> 
+    </div>
+    <div id="registerModal" class="modal"> 
+        <form class="modal-content animate" id="registerForm"> 
+            <div class="imgcontainer"> <span onclick="closeModal('registerModal')" class="close" title="Tutup Modal">×</span> <img src="https://placehold.co/150x150/e0e0e0/000000?text=Avatar" alt="Avatar" class="avatar"> </div> 
+            <div class="container"> <label for="reg_uname"><b>Username</b></label> <input type="text" placeholder="Masukkan Username" name="reg_uname" id="reg_uname" required> <label for="reg_email"><b>Email</b></label> <input type="email" placeholder="Masukkan Email" name="reg_email" id="reg_email" required> <label for="reg_psw"><b>Password</b></label> <input type="password" placeholder="Masukkan Password" name="reg_psw" id="reg_psw" required> <label for="reg_psw_repeat"><b>Ulangi Password</b></label> <input type="password" placeholder="Ulangi Password" name="reg_psw_repeat" id="reg_psw_repeat" required> <button type="submit">Daftar</button> </div> 
+            <div class="container-footer"> <button type="button" onclick="closeModal('registerModal')" class="cancelbtn">Batal</button> </div> 
+        </form> 
+    </div>
+
+    <div id="questionPage">
+        <h2 id="welcomeMessage">Selamat Datang di Halaman Soal!</h2>
+        <div id="allQuestionsContainer"></div>
+        <button id="submitAllBtn">Kumpulkan Jawaban</button>
+        <h3 id="finalScoreDisplay"></h3>
+    </div>
+
+    <div id="logoutButtonContainer" style="display: none; margin-top: 30px;">
+        <button id="logoutBtn" class="cancelbtn" style="width: auto;">Logout</button>
+    </div>
+
+    <script src="js/quiz-script.js"></script>
+</body>
+</html>
