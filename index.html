@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="js/main-script.js"></script>
+    <!-- Pastikan path ke script dan css sudah benar -->
     <link rel="stylesheet" href="css/main-style.css">
 </head>
 <body class="bg-slate-50 text-slate-800">
 
     <div class="flex min-h-screen">
+        <!-- Sidebar untuk Desktop (Tidak diubah, sudah benar) -->
         <aside class="w-72 bg-white border-r border-slate-200 p-6 fixed h-full overflow-y-auto hidden lg:block">
             <div class="flex items-center gap-3 mb-8">
                 <div class="bg-sky-500 p-2 rounded-lg">
@@ -45,26 +46,84 @@
             </nav>
         </aside>
 
+        <!-- Konten Utama -->
         <main class="lg:ml-72 p-6 md:p-10 w-full">
+            
+            <!-- MODIFIKASI 1: Header untuk Mobile -->
             <header class="lg:hidden flex justify-between items-center mb-6">
-                 </header>
+                <div class="flex items-center gap-3">
+                    <div class="bg-sky-500 p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-check"><path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z"/><path d="m16 12 2 2 4-4"/><path d="M16 3h6v15h-7c-1.7 0-3 1.3-3 3V7c0-2.2 1.8-4 4-4Z"/></svg>
+                    </div>
+                    <h1 class="text-xl font-bold text-slate-800">Pembelajaran</h1>
+                </div>
+                <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-slate-100">
+                    <i data-lucide="menu"></i>
+                </button>
+            </header>
+            
+            <!-- MODIFIKASI 1: Konten untuk Menu Mobile -->
              <div id="mobile-menu" class="hidden lg:hidden mb-6 bg-white p-4 rounded-lg shadow-md">
-                 </div>
+                <nav id="mobile-nav">
+                    <ul class="space-y-2">
+                        <li>
+                            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Kerangka Kerja</h3>
+                            <ul class="space-y-1">
+                                <li><a href="#pengantar" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">Pengantar</a></li>
+                                <li><a href="#dimensi" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">A. Dimensi Profil Lulusan</a></li>
+                                <li><a href="#prinsip" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">B. Prinsip Pembelajaran</a></li>
+                                <li><a href="#pengalaman" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">C. Pengalaman Belajar</a></li>
+                                <li><a href="#kerangka" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">D. Kerangka Pembelajaran</a></li>
+                                <li><a href="quiz.html" target="_blank" class="block py-2 rounded-md px-3 font-bold hover:bg-slate-100">Tes 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="pt-4">
+                            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Implementasi</h3>
+                             <ul class="space-y-1">
+                                <li><a href="#strategi" class="mobile-nav-link block py-2 rounded-md px-3 hover:bg-slate-100">Strategi Implementasi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+
+             <!-- MODIFIKASI 2: Mengisi Konten Section yang Kosong -->
              <div class="max-w-4xl mx-auto">
                 <section id="pengantar" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
-                    </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">Pengantar</h2>
+                    <p class="text-slate-600 leading-relaxed">Selamat datang di modul Pembelajaran Mendalam. Modul ini dirancang untuk memberikan pemahaman komprehensif tentang kerangka kerja dan prinsip-prinsip yang mendasari pembelajaran yang efektif dan bermakna.</p>
+                    <p class="text-slate-600 leading-relaxed">Kita akan menjelajahi berbagai aspek, mulai dari dimensi profil lulusan hingga strategi implementasi praktis di lapangan.</p>
+                </section>
+
                 <section id="dimensi" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
-                    </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">A. Dimensi Profil Lulusan</h2>
+                    <p class="text-slate-600 leading-relaxed">Profil lulusan yang ideal mencakup beberapa dimensi kunci, termasuk kompetensi akademik, keterampilan non-teknis (soft skills), karakter, dan kemampuan beradaptasi di era digital.</p>
+                </section>
+
                 <section id="prinsip" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
-                    </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">B. Prinsip Pembelajaran</h2>
+                    <p class="text-slate-600 leading-relaxed">Pembelajaran yang efektif didasarkan pada prinsip-prinsip seperti relevansi konteks, pembelajaran aktif, umpan balik yang konstruktif, dan kolaborasi antar siswa.</p>
+                </section>
+
                 <section id="pengalaman" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
-                     </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">C. Pengalaman Belajar</h2>
+                    <p class="text-slate-600 leading-relaxed">Merancang pengalaman belajar yang menarik adalah kunci. Ini dapat dicapai melalui metode berbasis proyek, studi kasus, gamifikasi, dan pembelajaran berbasis masalah.</p>
+                </section>
+
                 <section id="kerangka" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm mb-8">
-                    </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">D. Kerangka Pembelajaran</h2>
+                    <p class="text-slate-600 leading-relaxed">Kerangka pembelajaran menyediakan struktur yang jelas, mencakup tujuan pembelajaran, aktivitas, sumber daya, dan metode penilaian yang selaras untuk mencapai hasil yang diinginkan.</p>
+                </section>
+                
                  <section id="strategi" class="content-section space-y-6 bg-white p-8 rounded-2xl shadow-sm">
-                    </section>
+                    <h2 class="text-3xl font-bold text-slate-900 border-b pb-4">Strategi Implementasi</h2>
+                    <p class="text-slate-600 leading-relaxed">Implementasi yang berhasil memerlukan pendekatan bertahap, pelatihan bagi para pendidik, dukungan berkelanjutan, dan siklus evaluasi untuk perbaikan terus-menerus.</p>
+                </section>
              </div>
         </main>
     </div>
+
+    <!-- Script harus dimuat di akhir body untuk performa yang lebih baik -->
+    <script src="js/main-script.js"></script>
 </body>
 </html>
